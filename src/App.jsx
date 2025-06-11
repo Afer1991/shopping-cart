@@ -12,12 +12,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation cart={cartState} />
+        <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage cart={cartState} />} />
+          <Route path="/shop" element={<ShopPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/cart" element={<CartPage cartState={cartState} />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </BrowserRouter>
     </>
