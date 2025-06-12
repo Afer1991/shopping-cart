@@ -7,8 +7,6 @@ import Navigation from "./components/Navigation.jsx";
 import { useState } from "react";
 
 function App() {
-  const cartState = useState([]);
-
   return (
     <>
       <BrowserRouter>
