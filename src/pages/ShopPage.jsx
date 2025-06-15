@@ -1,11 +1,11 @@
-
+import Card from "../components/Card.jsx";
 
 const ShopPage = () => {
-  return(
+  return (
     <>
-      <h1>Shop</h1>
+      <Card></Card>
     </>
   );
-}
-  
-export default ShopPage
+};
+
+export default ShopPage;
