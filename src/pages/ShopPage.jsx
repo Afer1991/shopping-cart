@@ -6,37 +6,27 @@ const ShopPage = () => {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("https://fakestoreapi.com/products");
-
-        if (!response.ok) {
-          throw new Error("Could not fetch resource");
-        }
-
-        const data = await response.json();
-        setProducts(data);
-        return;
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchProducts();
+    fetch("https://fakestoreapi.com/products", { mode: "cors" })
+      .then((response) => response.json())
+      .then((response) => setProducts(response))
+      .catch((error) => console.error(error));
   }, []);
+
+  console.log(products);
 
   return (
     <>
       <h1>Products</h1>
       <div className={styles.cards}>
-        {products.map((product) => {
-          <Card
-            key={product.id}
-            image={product.image}
-            name={product.title}
-            price={"$" + product.price}
-          />;
-        })}
+        {products &&
+          products.map((product) => (
+            <Card
+              key={product.id}
+              image={product.image}
+              name={product.title}
+              price={"$" + product.price}
+            />
+          ))}
       </div>
     </>
   );
