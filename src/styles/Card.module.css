@@ -70,3 +70,9 @@
 .btn:hover {
   opacity: .8;
 }
+
+@media (min-width: 700px) {
+  .card {
+    margin: 0;
+  }
+}
