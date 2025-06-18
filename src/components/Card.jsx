@@ -7,26 +7,30 @@ const Card = ({ image = svg, name = "Name", price = "$10" }) => {
 
   return (
     <div className={styles.card}>
-      <img src={image} alt="logo" />
-      <h1>{name}</h1>
-      <p>{price}</p>
-      <form>
+      <div className={styles.imgContainer}>
+        <img className={styles.image} src={image} alt="product" />
+      </div>
+      <h1 className={styles.name}>{name}</h1>
+      <p className={styles.price}>{price}</p>
+      <form className={styles.form}>
         <div>
           <button
+            className={styles.inputBtn}
             type="button"
             onClick={() => setAmount((amount) => (amount > 1 ? amount - 1 : 0))}
           >
             -
           </button>
-          <input type="text" value={amount} readOnly />
+          <input className={styles.input} type="text" value={amount} readOnly />
           <button
+            className={styles.inputBtn}
             type="button"
             onClick={() => setAmount((amount) => amount + 1)}
           >
             +
           </button>
         </div>
-        <button>Add to Cart</button>
+        <button className={styles.btn}>Add to Cart</button>
       </form>
     </div>
   );

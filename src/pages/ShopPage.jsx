@@ -12,23 +12,23 @@ const ShopPage = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  console.log(products);
-
   return (
-    <>
-      <h1>Products</h1>
-      <div className={styles.cards}>
-        {products &&
-          products.map((product) => (
-            <Card
-              key={product.id}
-              image={product.image}
-              name={product.title}
-              price={"$" + product.price}
-            />
-          ))}
+    <section>
+      <div className={styles.container}>
+        <h1 className={styles.heading}>Products</h1>
+        <div className={styles.cards}>
+          {products &&
+            products.map((product) => (
+              <Card
+                key={product.id}
+                image={product.image}
+                name={product.title}
+                price={"$" + product.price}
+              />
+            ))}
+        </div>
       </div>
-    </>
+    </section>
   );
 };
 

@@ -1,5 +1,16 @@
+.heading {
+  font-family: 'Oswald';
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 250px);
-  gap: 1rem;
+  
 }

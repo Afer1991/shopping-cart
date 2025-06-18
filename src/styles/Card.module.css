@@ -1,5 +1,72 @@
 .card {
-  padding: 1rem;
-  border: 1px solid #000;
+  padding: 1.5rem;
   border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 6px #00000080;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+.image {
+  max-width: 60%;
+  height: auto;
+}
+
+.name, 
+.price {
+  text-align: center;
+  margin-bottom: .65rem;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-family: 'Oswald';
+}
+
+.price {
+  font-family: 'Raleway';
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  max-width: 50px;
+  text-align: center;
+  margin: 0 .5rem .65rem;
+  border-radius: .5rem;
+  padding: .25rem 0;
+}
+
+.inputBtn {
+  padding: .25rem .5rem;
+  border-radius: .5rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  color: #000;
+  background: #FFF;
+}
+
+.btn {
+  font-family: 'Raleway';
+  font-size: .75rem;
+  font-weight: bolder;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  background: #000;
+}
+
+.btn:hover {
+  opacity: .8;
 }
