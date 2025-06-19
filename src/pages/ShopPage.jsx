@@ -2,7 +2,7 @@ import Card from "../components/Card.jsx";
 import styles from "../styles/ShopPage.module.css";
 import { useState, useEffect } from "react";
 
-const ShopPage = () => {
+const ShopPage = ({ updateCart }) => {
   const [products, setProducts] = useState(null);
 
   useEffect(() => {
@@ -19,12 +19,7 @@ const ShopPage = () => {
         <div className={styles.cards}>
           {products &&
             products.map((product) => (
-              <Card
-                key={product.id}
-                image={product.image}
-                name={product.title}
-                price={"$" + product.price}
-              />
+              <Card key={product.id} article={product} addCart={updateCart} />
             ))}
         </div>
       </div>

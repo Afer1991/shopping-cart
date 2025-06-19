@@ -7,13 +7,60 @@ import Navigation from "./components/Navigation.jsx";
 import { useState } from "react";
 
 function App() {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product, quantity) => {
+    if (quantity > 0) {
+      const ckForDupes = cart.some((el) => {
+        return el.id == product.id;
+      });
+
+      if (ckForDupes) {
+        const removeDupes = cart.filter((el) => {
+          return el.id !== product.id;
+        });
+
+        const findIndex = cart.findIndex((el) => {
+          return el.id == product.id;
+        });
+
+        const existingQty = cart[findIndex].units;
+
+        const noDupesCart = [
+          ...removeDupes,
+          {
+            id: product.id,
+            title: product.title,
+            image: product.image,
+            price: product.price,
+            units: quantity + existingQty,
+          },
+        ];
+
+        setCart(noDupesCart);
+      } else {
+        const updatedCart = [
+          ...cart,
+          {
+            id: product.id,
+            title: product.title,
+            image: product.image,
+            price: product.price,
+            units: quantity,
+          },
+        ];
+        setCart(updatedCart);
+      }
+    }
+  };
+
   return (
     <>
       <BrowserRouter>
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/shop" element={<ShopPage updateCart={addToCart} />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>

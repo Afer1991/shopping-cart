@@ -1,18 +1,17 @@
-import svg from "../assets/react.svg";
 import styles from "../styles/Card.module.css";
 import { useState } from "react";
 
-const Card = ({ image = svg, name = "Name", price = "$10" }) => {
+const Card = ({ article, addCart }) => {
   const [amount, setAmount] = useState(0);
 
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
-        <img className={styles.image} src={image} alt="product" />
+        <img className={styles.image} src={article.image} alt="product" />
       </div>
-      <h1 className={styles.name}>{name}</h1>
-      <p className={styles.price}>{price}</p>
-      <form className={styles.form}>
+      <h1 className={styles.name}>{article.title}</h1>
+      <p className={styles.price}>{"$" + article.price}</p>
+      <div className={styles.addItem}>
         <div>
           <button
             className={styles.inputBtn}
@@ -30,8 +29,10 @@ const Card = ({ image = svg, name = "Name", price = "$10" }) => {
             +
           </button>
         </div>
-        <button className={styles.btn}>Add to Cart</button>
-      </form>
+        <button className={styles.btn} onClick={() => addCart(article, amount)}>
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 };
