@@ -1,7 +1,19 @@
-const CartPage = () => {
+import { Link } from "react-router";
+const CartPage = ({ existingCart }) => {
   return (
     <>
-      <h1>Cart Page</h1>
+      {existingCart.length == 0 ? (
+        <>
+          <h1>Your Cart is empty</h1>
+          <Link to="/shop">
+            <button>Shop Now</button>
+          </Link>
+        </>
+      ) : (
+        <>
+          <h1>Your Cart</h1>
+        </>
+      )}
     </>
   );
 };

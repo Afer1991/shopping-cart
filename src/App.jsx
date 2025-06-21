@@ -62,7 +62,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage updateCart={addToCart} />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/cart" element={<CartPage existingCart={cart} />} />
         </Routes>
       </BrowserRouter>
     </>
