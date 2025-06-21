@@ -1,0 +1,29 @@
+.emptyCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+
+.heading {
+  font-family: 'Oswald';
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  font-family: 'Raleway';
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  background: #000;
+}
+ 
+.btn:hover {
+  opacity: .8;
+}
