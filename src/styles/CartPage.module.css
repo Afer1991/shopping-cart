@@ -6,10 +6,19 @@
   height: 80vh;
 }
 
-.heading {
+.heading,
+.cartHeading {
   font-family: 'Oswald';
   font-size: 2rem;
+}
+
+.heading {
   margin-bottom: 1rem;
+}
+
+.cartHeading {
+  text-align: center;
+  padding: 1rem 0;
 }
 
 .btn {
@@ -26,4 +35,41 @@
  
 .btn:hover {
   opacity: .8;
+}
+
+.yourCart {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 6px #00000080;
+}
+
+.checkOut {
+  box-shadow: 0 0 6px #00000080;
+  padding: 1rem;
+}
+
+.subtotal,
+.taxes {
+  font-family: 'Raleway';
+  margin-bottom: .3rem;
+}
+
+.total {
+  font-family: 'Oswald';
+  margin-bottom: .3rem;
+}
+
+@media (min-width: 700px) {
+  .yourCart {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .items {
+    flex-grow: 2;
+  }
 }

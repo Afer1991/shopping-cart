@@ -1,17 +1,19 @@
+import styles from "../styles/CartItem.module.css";
+
 const CartItem = ({ article }) => {
   return (
-    <div>
-      <div>
-        <img src={article.image} />
+    <div className={styles.container}>
+      <div className={styles.imgContainer}>
+        <img className={styles.image} src={article.image} />
       </div>
       <div>
-        <h1>{article.title}</h1>
-        <p>Price: ${article.price}</p>
-        <p>Total: ${article.price * article.units}</p>
+        <h1 className={styles.title}>{article.title}</h1>
+        <p className={styles.price}>Price: ${article.price}</p>
+        <p className={styles.total}>Total: ${article.price * article.units}</p>
         <div>
-          <button>-</button>
-          <input type="text" />
-          <button>+</button>
+          <button className={styles.inputBtn}>-</button>
+          <input className={styles.input} type="text" />
+          <button className={styles.inputBtn}>+</button>
         </div>
       </div>
     </div>
