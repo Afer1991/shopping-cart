@@ -15,7 +15,13 @@ const CartPage = ({ existingCart }) => {
         </>
       ) : (
         <>
-          <h1>Your Cart</h1>
+          <section>
+            <h1>Your Cart</h1>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+          </section>
         </>
       )}
     </>
