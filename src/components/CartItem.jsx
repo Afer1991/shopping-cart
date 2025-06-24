@@ -9,7 +9,9 @@ const CartItem = ({ article }) => {
       <div>
         <h1 className={styles.title}>{article.title}</h1>
         <p className={styles.price}>Price: ${article.price}</p>
-        <p className={styles.total}>Total: ${article.price * article.units}</p>
+        <p className={styles.total}>
+          Total: ${(article.price * article.units).toFixed(2)}
+        </p>
         <div>
           <button className={styles.inputBtn}>-</button>
           <input className={styles.input} type="text" />
