@@ -29,7 +29,13 @@ const Card = ({ article, addCart }) => {
             +
           </button>
         </div>
-        <button className={styles.btn} onClick={() => addCart(article, amount)}>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            addCart(article, amount);
+            setAmount(0);
+          }}
+        >
           Add to Cart
         </button>
       </div>

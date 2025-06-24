@@ -2,7 +2,7 @@ import styles from "../styles/CartPage.module.css";
 import { Link } from "react-router";
 import CartItem from "../components/CartItem";
 
-const CartPage = ({ existingCart }) => {
+const CartPage = ({ existingCart, updateCart }) => {
   const total = () => {
     let calculateTotal = 0;
 
@@ -31,12 +31,18 @@ const CartPage = ({ existingCart }) => {
             <div className={styles.yourCart}>
               <div className={styles.items}>
                 {existingCart.map((product) => (
-                  <CartItem key={product.id} article={product} />
+                  <CartItem
+                    key={product.id}
+                    article={product}
+                    removeFromCart={updateCart}
+                  />
                 ))}
               </div>
               <div>
                 <div className={styles.checkOut}>
-                  <p className={styles.subtotal}>Subtotal: ${total()}</p>
+                  <p className={styles.subtotal}>
+                    Subtotal: ${total().toFixed(2)}
+                  </p>
                   <p className={styles.taxes}>
                     Taxes: ${(total() * 0.07).toFixed(2)}
                   </p>

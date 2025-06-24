@@ -1,6 +1,6 @@
 import styles from "../styles/CartItem.module.css";
 
-const CartItem = ({ article }) => {
+const CartItem = ({ article, removeFromCart }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
@@ -9,14 +9,16 @@ const CartItem = ({ article }) => {
       <div>
         <h1 className={styles.title}>{article.title}</h1>
         <p className={styles.price}>Price: ${article.price}</p>
+        <p className={styles.qty}> Qty: {article.units}</p>
         <p className={styles.total}>
           Total: ${(article.price * article.units).toFixed(2)}
         </p>
-        <div>
-          <button className={styles.inputBtn}>-</button>
-          <input className={styles.input} type="text" />
-          <button className={styles.inputBtn}>+</button>
-        </div>
+        <button
+          className={styles.btn}
+          onClick={() => removeFromCart(article.id)}
+        >
+          Remove
+        </button>
       </div>
     </div>
   );

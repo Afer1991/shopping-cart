@@ -24,24 +24,24 @@
 }
 
 .price,
-.total {
+.total,
+.qty {
   font-family: 'Raleway';
   margin-bottom: .3rem;
 }
 
-.input {
-  max-width: 50px;
-  text-align: center;
-  margin: 0 .5rem .65rem;
-  border-radius: .5rem;
-  padding: .25rem 0;
-}
-
-.inputBtn {
-  padding: .25rem .5rem;
-  border-radius: .5rem;
-  border: 1px solid #000;
+.btn {
+  font-family: 'Raleway';
+  font-weight: bolder;
+  padding: .4rem .75rem;
+  margin-bottom: .3rem;
+  border-radius: 1rem;
+  border: none;
   cursor: pointer;
-  color: #000;
-  background: #FFF;
+  color: #FFF;
+  background: #000;
+}
+ 
+.btn:hover {
+  opacity: .8;
 }
