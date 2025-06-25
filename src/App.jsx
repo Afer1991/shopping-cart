@@ -73,7 +73,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage updateCart={addToCart} />} />
-          <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/cart"
             element={
