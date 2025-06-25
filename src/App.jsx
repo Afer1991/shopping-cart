@@ -62,6 +62,10 @@ function App() {
     setCart(removeFromCart);
   };
 
+  const wipeOutCart = () => {
+    setCart([]);
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -72,7 +76,13 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/cart"
-            element={<CartPage existingCart={cart} updateCart={removeItem} />}
+            element={
+              <CartPage
+                existingCart={cart}
+                updateCart={removeItem}
+                removeCart={wipeOutCart}
+              />
+            }
           />
         </Routes>
       </BrowserRouter>

@@ -1,4 +1,5 @@
-.emptyCart {
+.emptyCart,
+.checkOutPage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +8,8 @@
 }
 
 .heading,
-.cartHeading {
+.cartHeading,
+.checkOutHeading {
   font-family: 'Oswald';
   font-size: 2rem;
 }
@@ -19,6 +21,17 @@
 .cartHeading {
   text-align: center;
   padding: 1rem 0;
+}
+
+.checkOutHeading {
+  text-align: center;
+}
+
+.checkOutSubheading {
+  font-family: 'Oswald';
+  font-weight: 400;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .btn {
