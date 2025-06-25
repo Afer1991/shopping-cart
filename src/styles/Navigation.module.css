@@ -55,7 +55,8 @@
   position: relative;
   top: -.5rem;
   left: -.25rem;
-  font-size: .8rem;
+  font-family: 'Oswald';
+  font-size: .65rem;
 }
 
 @media (min-width: 500px) {
@@ -77,6 +78,6 @@
     padding: .11rem .225rem .11rem;
     top: -.75rem;
     left: -.4rem;
-    font-size: .9rem;
+    font-size: .75rem;
   }
 }

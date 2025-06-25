@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import ShopPage from "./pages/ShopPage.jsx";
-import ContactPage from "./pages/ContactPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import Navigation from "./components/Navigation.jsx";
@@ -66,10 +65,20 @@ function App() {
     setCart([]);
   };
 
+  const totalItems = () => {
+    let allItems = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+      allItems += cart[i].units;
+    }
+
+    return allItems;
+  };
+
   return (
     <>
       <BrowserRouter>
-        <Navigation />
+        <Navigation itemsInCart={totalItems} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage updateCart={addToCart} />} />

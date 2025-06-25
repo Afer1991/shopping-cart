@@ -3,7 +3,7 @@ import styles from "../styles/Navigation.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faShop } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = () => {
+const Navigation = ({ itemsInCart }) => {
   return (
     <nav className={styles.nav}>
       <div className={styles.logoContainer}>
@@ -19,7 +19,7 @@ const Navigation = () => {
         </NavLink>
         <NavLink to="/cart" className={styles.cartLink}>
           <FontAwesomeIcon icon={faCartShopping} />
-          <span className={styles.cartItems}>0</span>
+          <span className={styles.cartItems}>{itemsInCart()}</span>
         </NavLink>
       </div>
     </nav>
