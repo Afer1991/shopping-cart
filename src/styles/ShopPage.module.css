@@ -9,9 +9,10 @@
   width: 90%;
   max-width: 1500px;
   margin: 0 auto;
+  padding-bottom: 6rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
