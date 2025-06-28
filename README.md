@@ -15,7 +15,7 @@ git clone git@github.com:Afer1991/shopping-cart.git
 ```
 
 ```
-cd shopping cart
+cd shopping-cart
 ```
 
 ```
