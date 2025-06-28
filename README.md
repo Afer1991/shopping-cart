@@ -1,4 +1,4 @@
-# CV Application
+# Shopping Cart
 
 ## Description
 

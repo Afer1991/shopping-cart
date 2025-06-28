@@ -43,7 +43,7 @@ const CartPage = ({ existingCart, updateCart, removeCart }) => {
         </>
       ) : (
         <>
-          <section>
+          <section className={styles.cartSection}>
             <h1 className={styles.cartHeading}>Your Cart</h1>
             <div className={styles.yourCart}>
               <div className={styles.items}>
